@@ -1,2 +1,3 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
-B
+A
+<jsp:forward page='2.b.jsp'/>
