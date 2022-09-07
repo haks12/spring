@@ -12,7 +12,7 @@
 	} catch(NumberFormatException e) {
 %>
 		<%-- 과제: numIn.jsp.form 에 에러메세지(영어)를 출력하라. --%>
-		<c:redirect url='4.numIn.jsp'/>
+		<c:redirect url='4.numIn.jsp?msg=Input number.'/>
 <%
 	}
 %>

@@ -3,3 +3,7 @@
 	<input type='number' name='num'/>
 	<input type='submit'/>
 </form>
+<%
+	String msg = request.getParameter("msg");
+%>
+<%= msg != null ? msg : "" %>
