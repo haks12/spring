@@ -1,4 +1,3 @@
-<%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 
 <!-- 과제:
 다음 또는 네이버를 선택하고, 폼을 제춣한다.
