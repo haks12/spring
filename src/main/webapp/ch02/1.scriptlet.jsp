@@ -5,4 +5,4 @@
 	int num2 = 2;
 %>
 <h2>더하기</h2> <!-- scriptlet 바깥에서는 html언어로 -->
-<%= num1 %> + <%= num2 %> = <%= num1 + num2 %>
+<%= num1 %> + <%= num2 %> = <%= num1 + num2 %> <!-- expression -->

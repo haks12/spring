@@ -3,8 +3,8 @@
 <%!
 	public int add(int num1, int num2) {
 		return num1 + num2;
-	}
-	int num1 = 1;
+	} //멤버메서드 선언
+	int num1 = 1; //멤버변수 선언
 %>
 <%
 	int num2 = 2;

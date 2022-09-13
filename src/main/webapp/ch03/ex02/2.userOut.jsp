@@ -2,7 +2,7 @@
 <%
 	String userName = request.getParameter("userName");
 	String age = request.getParameter("age");
-	String birthday = request.getParameter("birthday");
+	String birthday = request.getParameter("birthday");//request값이 없을 때에는  null을 return
 %>
 <h3>사용자</h3>
 <ul>

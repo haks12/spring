@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class GetPost extends HttpServlet {
 	@Override
 	public void service(HttpServletRequest req, HttpServletResponse res) 
-			throws ServerException, IOException {
+		throws ServerException, IOException {
 		int num1 = 1;
 		int num2 = 2;
 		

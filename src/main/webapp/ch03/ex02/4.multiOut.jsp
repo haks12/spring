@@ -1,6 +1,6 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 <%
-	String[] letters = request.getParameterValues("letter");
+	String[] letters = request.getParameterValues("letter");//para method가 string으로 처리중
 	String gender = request.getParameter("gender");
 	String[] jobs = request.getParameterValues("job");
 %>
