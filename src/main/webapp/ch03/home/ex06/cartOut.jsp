@@ -4,21 +4,20 @@
 <h3>장바구니</h3>
 <%
 	Object cartObj = session.getAttribute("cart");
-	
 	if(cartObj != null) {
 		List<String> cart = (List<String>)cartObj;
 		if(cart.size() > 0) {
 %>
-			<ul>
+
+			<form action= 'cartDelProc.jsp' method='post'><!-- 비논리: html, 논리: java -->
+				<ul>
 <%
-				for(String product: cart) {
+					for(String product: cart) {
+					}
 %>
-					<li><%= product %></li>
-<%
-				}
-%>
-			</ul>
+				</ul>
+			</form>
 <%
 		} else out.println("장바구니에 물건이 없습니다.");
-	}
+	} else out.println("장바구니가 없습니다.");
 %>
