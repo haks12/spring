@@ -1,15 +1,26 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%
-	String[] products = request.getParameterValues("product");
+	String cart = "";
+	Cookie[] cookies = request.getCookies();
+	for(Cookie cookie: cookies)
+		if(cookie.getName().equals("cart"))
+			cart = cookie.getValue();
 	
-	if(products != null) {
-		String cart = "";// 쿠키의 데이터타입은 text, 카트의 데이터타입은 String
-		for(String product: products) cart += product + "/"; // '카트에 물건을 담는다' 를 +=로 표현
-
+	String[] products = request.getParameterValues("product");
+	if(products != null && products.length > 0) {
+		for(String product: products)
+			cart += product + "/";
+		
 		Cookie cookie = new Cookie("cart", cart);
-		cookie.setMaxAge(60 * 60 * 24 * 7); // para 초 단위, 내가 계산하지말고 expression을 쓰자.
-		response.addCookie(cookie);// response 안에 집어넣자.
+		cookie.setMaxAge(60 * 60 * 24 * 7);
+		response.addCookie(cookie);
+	} else {
+%>
+		<c:redirect url='main.jsp'>
+			<c:param name='msg' value='장바구니에 담을 물건을 선택하세요.'/>
+		</c:redirect>
+<%
 	}
 %>
 <c:redirect url='cartOut.jsp'/>
