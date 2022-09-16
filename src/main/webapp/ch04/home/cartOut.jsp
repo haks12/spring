@@ -19,7 +19,7 @@
 				while(products.hasMoreTokens()) {
 					product = products.nextToken();
 %>
-					<li><%= product %><input type='checkbox' name='product' value='<%= product %>'/>
+					<li><%= product %><input type='checkbox' name='product' value='<%= product %>'/>// 물건 하나를 꺼내면 해당 li를 만든다.
 <%				
 				}
 %>			
@@ -28,6 +28,6 @@
 		</form>
 <%
 		String msg = request.getParameter("msg");
-		if(msg != null) out.println(msg);
+		if(msg != null) out.println(msg);// 에러메세지를 tomcat으로 출력
 	} else out.println("장바구니에 물건이 없습니다.");
 %>

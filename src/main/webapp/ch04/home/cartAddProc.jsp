@@ -15,7 +15,7 @@
 		Cookie cookie = new Cookie("cart", cart);
 		cookie.setMaxAge(60 * 60 * 24 * 7);
 		response.addCookie(cookie);
-	} else {
+	} else {// else는 물건이 없을때, 다시 form으로 error msg와 함께 돌려 보낸다.
 %>
 		<c:redirect url='main.jsp'>
 			<c:param name='msg' value='장바구니에 담을 물건을 선택하세요.'/>
