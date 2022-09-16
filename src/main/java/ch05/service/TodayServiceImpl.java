@@ -11,8 +11,9 @@ public class TodayServiceImpl implements TodayService{
 	public TodayServiceImpl() {
 		this.todayDao = new TodayDaoImpl();
 	}
+	
 	@Override
 	public LocalDate getToday() {
 		return todayDao.selectToday();
-		}
+	}
 }

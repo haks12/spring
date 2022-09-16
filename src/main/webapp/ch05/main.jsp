@@ -3,4 +3,4 @@
 <%
 	TodayService todayService = new TodayServiceImpl();
 %>
-<%= todayService.getToday() %> 
+<%= todayService.getToday() %>

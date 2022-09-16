@@ -7,18 +7,18 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class Configuration {
-	private static SqlSessionFactory sqlSessionFactory;
+	private static SqlSessionFactory sqlsessionFactory;
 	
 	static {
 		try {
 			Reader reader = Resources.getResourceAsReader("ch05/config/sqlMapConfig.xml");
-			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+			sqlsessionFactory = new SqlSessionFactoryBuilder().build(reader);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public static <T>T getMapper(Class<T> args) {
-		return sqlSessionFactory.openSession(true).getMapper(args);
+		return sqlsessionFactory.openSession(true).getMapper(args);
 	}
 }

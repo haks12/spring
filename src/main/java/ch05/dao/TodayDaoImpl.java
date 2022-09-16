@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import ch05.config.Configuration;
 import ch05.dao.map.TodayMap;
 
-public class TodayDaoImpl implements TodayDao {
+public class TodayDaoImpl implements TodayDao{
 	private TodayMap todayMap;
 	
 	public TodayDaoImpl() {
